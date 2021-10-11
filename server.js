@@ -92,6 +92,11 @@ app.get("/helps/seed", (req, res) => {
   })
 })
 
+app.get("/", (req, res)=> {
+  Help.find({}, (err, helps)=> {
+  res.send("hello!", {helps})
+  })
+})
 
 app.get("/helps", (req, res)=> {
   Help.find({}, (err, helps)=> {
