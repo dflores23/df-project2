@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+<body>
+    <%- include("../partials/header.ejs") %>
+
+    <main>
+        <div>
+          <form action="/helps/<%= help._id %>?_method=PUT" method="post">
+            <fieldset>
+              First name: 
+              <input 
+            type="text"
+            name="name"
+            placeholder="patient last name"
+            value="<%= help.name %>"/>
+        </label>
+              <fieldset>
+                    Last name: 
+                    <input 
+                  type="text"
+                  name="last"
+                  placeholder="patient last name"
+                  value="<%= help.last %>"/>
+              </label>
+              <label>
+                Blood Type: 
+                <input 
+              type="text"
+              name="blood"
+              placeholder="blood type"
+              value="<%= help.blood %>"/>
+          </label>
+          <label>
+            Date of birth: 
+            <input 
+          type="text"
+          name="birth"
+          placeholder="date of birth"
+          value="<%= help.birth %>"/>
+      </label>
+      <label>
+        Drug Allergies: 
+        <input 
+      type="text"
+      name="allergies"
+      placeholder="Enter drug allergies"
+      value="<%= help.allergies %>"/>
+  </label>
+  <label>
+    Other known Allergies: 
+    <input 
+  type="text"
+  name="otherAllergies"
+  placeholder="Other known allergies"
+  value="<%= help.otherAllergies %>"/>
+</label>
+Medical Conditions: 
+        <input 
+      type="text"
+      name="conditions"
+      placeholder="Enter any medical conditions"
+      value="<%= help.conditions %>"/>
+  </label>
+  Emergency Contact Information : 
+        <input 
+      type="text"
+      name="emergencyName"
+      placeholder="Emergency name "
+      value="<%= help.emergencyName %>"/>
+  </label>
+</label> 
+  <input 
+    type="text"
+    name="emergencyNumber"
+    placeholder="Emergency number"
+    value="<%= help.emergencyNumber %>"/>
+</label>
+                <label>
+                    DNR:
+                    <input 
+                    type="checkbox"
+                    name="dnr"/>
+                    <%= help.dnr ? "checked" : "" %>
+                </label>
+                <input type="submit" value="Edit File"/>
+              </fieldset>
+          </form>
+
+        </div>
+    </main>
+</body>
+</html>

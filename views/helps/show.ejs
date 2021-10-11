@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+<body>
+    <%- include("../partials/header.ejs") %>
+
+    <main>
+        <div>
+            <article>
+                <h3>Name</h3>
+                    <%= help.name %>
+                    <h3>Last name </h3>
+                    <%= help.last %>
+                    <h3>Blood type</h3>
+                    <%= help.blood %>
+                    <h3>Date of Birth</h3>
+                    <%= help.birth %>
+                    <h3>Drug Allergies</h3>
+                    <%= help.allergies %>
+                    <h3>Other Allergies</h3>
+                    <%= help.otherAllergies %>
+                    <h3>Medical Conditions</h3>
+                    <%= help.conditions %>
+                    <h3>Emergency Information</h3>
+                    <%= help.emergencyName %>
+                    <%= help.emergencyNumber %>
+                    <h3>Do-Not-Resuscitate order</h3>
+                    <%= help.dnr ? "Do" : "Don't" %> 
+                    <form action="/helps/<%= help._id %>?_method=Delete" 
+                        method="post">
+                        <input type="submit" value="Delete"/>
+                    </form>
+                    <a href="/helps/<%= help._id%>/edit"><button>Edit</button></a>
+                
+            </article>
+
+        </div>
+    </main>
+</body>
+</html>
