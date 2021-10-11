@@ -1,84 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
-<body>
+
+  <body>
     <%- include("../partials/header.ejs") %>
 
-    <main>
+      <main>
         <div>
           <form action="/helps" method="POST">
-              <fieldset>
-                  <legend>Create a new profile</legend>
-                  <label>
-                      First name: 
-                      <input 
-                    type="text"
-                    name="name"
-                    placeholder="Enter patient name"/>
-                </label>
-    
-                    <label>
-                        Last name: 
-                        <input 
-                      type="text"
-                      name="last"
-                      placeholder="Enter patient last name"/>
-                  </label>
-                  <label>
-                    Blood type: 
-                    <input 
-                  type="text"
-                  name="blood"
-                  placeholder="Enter blood type"/>
-              </label>
+            <fieldset>
+              <legend>Personal Information</legend>
+
               <label>
-                <label>
-                    Date of birth: 
-                    <input 
-                  type="text"
-                  name="birth"
-                  placeholder="Date of birth"
-              </label> Drug Allergies: 
-              <input 
-            type="text"
-            name="allergies"
-            placeholder="Enter drug allergies"
-        </label>
-        <label>
-          Other known Allergies: 
-          <input 
-        type="text"
-        name="otherAllergies"
-        placeholder="Other known allergies"
-      </label>
-      Medical Conditions: 
-              <input 
-            type="Comment"
-            name="conditions"
-            placeholder="Enter any medical conditions"
-        </label>
-        Emergency Contact Name: 
-              <input 
-            type="text"
-            name="emergencyName"
-            placeholder="Emergency name"
-        </label>
-        <input 
-            type="number"
-            name="emergencyNumber"
-            placeholder="Emergency number"
-        </label>
-        <label>
-            DNR:
-            <input 
-            type="checkbox"
-            name="DNR"/>
-        </label>
-                <input type="submit" value="Create new profile"/>
-              </fieldset>
+                First name:
+                <input type="text" name="name" placeholder="Enter patient name" />
+              </label>
+
+              <label>
+                Last name:
+                <input type="text" name="last" placeholder="Enter patient last name" />
+              </label>
+
+              <label>
+                Blood type:
+                <input type="text" name="blood" placeholder="Enter blood type" />
+              </label>
+
+              <br>
+
+              <label>
+                Date of birth:
+                <input type="text" name="birth" placeholder="Date of birth" />
+              </label>
+
+              <label>
+                Drug Allergies:
+                <input type="text" name="allergies" placeholder="Enter drug allergies" />
+              </label>
+
+              <label>
+                Other known Allergies:
+                <input type="text" name="otherAllergies" placeholder="Other known allergies" />
+              </label>
+
+              <br>
+
+              <label>
+                Medical Conditions:
+                <input type="Comment" name="conditions" placeholder="Enter any medical conditions" />
+              </label>
+
+              <label>
+                Emergency Contact Name:
+                <input type="text" name="emergencyName" placeholder="Emergency name" />
+              </label>
+
+              <label>
+                <input type="number" name="emergencyNumber" placeholder="Emergency number" />
+              </label>
+
+              <br>
+
+              <label>
+                Do Not Resuscitate:
+                <input type="checkbox" name="DNR" />
+              </label>
+              <br>
+              <input type="submit" value="Create" />
+            </fieldset>
           </form>
 
         </div>
-    </main>
-</body>
+      </main>
+  </body>
+
 </html>

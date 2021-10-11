@@ -92,6 +92,7 @@ app.get("/helps/seed", (req, res) => {
   })
 })
 
+
 app.get("/helps", (req, res)=> {
   Help.find({}, (err, helps)=> {
   res.render("helps/index.ejs", {helps})

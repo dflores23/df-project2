@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
-<body>
-    <%- include("../partials/header.ejs") %>
-    <main>
-        <div>
-            <a href="/helps/new"><button>Create new file</button></a>
-            
-            <% for (help of helps) { %>
-                <article>
-                    <a href="/helps/<%= help._id %>">
-                        <h2>
-                            <%= help.name %> <%= help.last %> 
-                        </h2>
-                </article>
-                
-            <% } %>
-        </div>
-    </main>
-</body>
+
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <div>
+                    <a href="/helps/new"><button>Create new file</button></a>
+
+                    <% for (help of helps) { %>
+                        <article>
+                            <a href="/helps/<%= help._id %>">
+                                <h2>
+                                    <%= help.name %>
+                                    <%= help.last %>
+                                </h2>
+                        </article>
+
+                        <% } %>
+                </div>
+            </main>
+    </body>
+
 </html>
