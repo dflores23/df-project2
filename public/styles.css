@@ -4,3 +4,8 @@
 .two {
     margin: 1rem;
 }
+
+textarea {
+    resize: none;
+    height: 30px;
+}

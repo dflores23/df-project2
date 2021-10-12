@@ -41,31 +41,32 @@
                   value="<%= help.otherAllergies %>" />
               </label>
 
+              
+              <label>
+                Emergency Contact Information :
+                <input type="text" name="emergencyName" placeholder="Emergency name "
+                value="<%= help.emergencyName %>" />
+              </label>
+              
+              <label>
+                <input type="text" name="emergencyNumber" placeholder="Emergency number"
+                value="<%= help.emergencyNumber %>" />
+              </label>
+              
               <label>
                 Medical Conditions:
                 <input type="text" name="conditions" placeholder="Enter any medical conditions"
                   value="<%= help.conditions %>" />
               </label>
-
-              <label>
-                Emergency Contact Information :
-                <input type="text" name="emergencyName" placeholder="Emergency name "
-                  value="<%= help.emergencyName %>" />
-              </label>
-
-              <label>
-                <input type="text" name="emergencyNumber" placeholder="Emergency number"
-                  value="<%= help.emergencyNumber %>" />
-              </label>
-
+              
               <label>
                 Do Not Resuscitate:
                 <input type="checkbox" name="dnr" />
                 <%= help.dnr ? "checked" : "" %>
               </label>
-
+              
               <input type="submit" value="Update Info" />
-
+              
             </fieldset>
 
           </form>
