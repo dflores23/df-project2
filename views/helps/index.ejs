@@ -6,8 +6,7 @@
         <%- include("../partials/header.ejs") %>
             <main>
                 <div>
-                    <a href="/helps/new"><button>Create new file</button></a>
-
+                    
                     <% for (help of helps) { %>
                         <article>
                             <a href="/helps/<%= help._id %>">
@@ -15,11 +14,13 @@
                                     <%= help.name %>
                                     <%= help.last %>
                                 </h2>
-                        </article>
-
-                        <% } %>
-                </div>
-            </main>
+                            </article>
+                            
+                            <% } %>
+                        </div>
+                        <br>
+                        <a href="/helps/new"><button>Create new file</button></a>
+                    </main>
     </body>
 
 </html>

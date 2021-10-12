@@ -12,7 +12,7 @@
 
               <label>
                 First name:
-                <input type="text" name="name" placeholder="patient last name" value="<%= help.name %>" />
+                <input type="text" name="name" placeholder="patient first name" value="<%= help.name %>" />
               </label>
 
               <label>
@@ -27,7 +27,7 @@
 
               <label>
                 Date of birth:
-                <input type="text" name="birth" placeholder="date of birth" value="<%= help.birth %>" />
+                <input type="date" name="birth" placeholder="date of birth" value="<%= help.birth %>" />
               </label>
 
               <label>
@@ -61,10 +61,10 @@
               <label>
                 Do Not Resuscitate:
                 <input type="checkbox" name="dnr" />
-                <%= help.dnr ? "checked" : "unchecked " %>
+                <%= help.dnr ? "checked" : "" %>
               </label>
 
-              <input type="submit" value="Edit File" />
+              <input type="submit" value="Update Info" />
 
             </fieldset>
 
