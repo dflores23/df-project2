@@ -2,7 +2,7 @@
 //Import dependencies
 //___________________
 const mongoose = require("./connection")
-const Help = require("./help")
+const Help = require("./helps")
 
 //___________________
 //seed code

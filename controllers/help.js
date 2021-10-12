@@ -1,13 +1,25 @@
 //___________________________
 //import dependencies
 //___________________________
-const express = require("express")
+const express = require("express");
 const Help = require("../models/help")
 
 //___________________________
 //create Route
 //___________________________
 const router = express.Router()
+
+// ___________________________
+// router middleware
+// ___________________________ 
+router.use((req, res, next)=> {
+    if(req.session.loggedIn) {
+        next();
+    } else {
+        res.redirect("/user/login")
+    }
+})
+
 
 //___________________________
 //Routes

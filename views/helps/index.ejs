@@ -6,21 +6,25 @@
         <%- include("../partials/header.ejs") %>
             <main>
                 <div>
-                    
+                    <a href="/helps/new"><button>Create new file</button></a>
+                    <br>
                     <% for (help of helps) { %>
                         <article>
                             <a href="/helps/<%= help._id %>">
-                                <h2>
-                                    <%= help.name %>
-                                    <%= help.last %>
-                                </h2>
-                            </article>
-                            
-                            <% } %>
-                        </div>
-                        <br>
-                        <a href="/helps/new"><button>Create new file</button></a>
-                    </main>
+                                <h2
+                                hx-get="/helps/<%= help._id %>"
+                                hx-trigger="click"
+                                hx-target="div"
+                                hx-swap="innerHTML">
+                                <%= help.name %> <%= help.last %>
+                            </h2>
+                        </article>
+                        
+                        <% } %>
+                    </div>
+                    <br>
+                    <a href="/helps/logout"><button>Logout</button></a>
+            </main>
     </body>
 
 </html>
