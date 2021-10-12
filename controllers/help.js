@@ -52,7 +52,7 @@ router.get("/new", (req, res) => {
 // create route
 router.post("/", (req, res) => {
     req.body.dnr = req.body.dnr === "on" ? true : false;
-    Help.create(req.body, (err, help) => {
+    Help.create(req.body, (err, helps) => {
         res.redirect("/helps");
     });
 });
@@ -63,9 +63,9 @@ router.get("/:id/edit", (req, res) => {
     // get the id from params
     const id = req.params.id;
     // get the help from the database
-    Help.findById(id, (err, help) => {
+    Help.findById(id, (err, helps) => {
         // render template and send it help
-        res.render("helps/edit.ejs", { help });
+        res.render("helps/edit.ejs", { helps });
     });
 });
 
@@ -76,7 +76,7 @@ router.put("/:id", (req, res) => {
     // check if the dnr property should be true or false
     req.body.dnr = req.body.dnr === "on" ? true : false;
     // update the dnr
-    Help.findByIdAndUpdate(id, req.body, { new: true }, (err, help) => {
+    Help.findByIdAndUpdate(id, req.body, { new: true }, (err, helps) => {
         // redirect user back to main page 
         res.redirect("/helps");
     });
@@ -86,7 +86,7 @@ router.delete("/:id", (req, res) => {
     // get the id from params
     const id = req.params.id;
     // delete the help
-    Help.findByIdAndRemove(id, (err, help) => {
+    Help.findByIdAndRemove(id, (err, helps) => {
         // redirect user back to index page
         res.redirect("/helps");
     });
@@ -96,9 +96,9 @@ router.delete("/:id", (req, res) => {
 router.get("/:id", (req, res) => {
     // grabs the id from params
     const id = req.params.id
-    Help.findById(id, (err, help) => {
+    Help.findById(id, (err, helps) => {
         //render the template
-        res.render("helps/show.ejs", { help })
+        res.render("helps/show.ejs", { helps })
     })
 })
 
