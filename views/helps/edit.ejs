@@ -9,7 +9,7 @@
         <div>
           <form action="/helps/<%= help._id %>?_method=PUT" method="post">
             <fieldset>
-
+              <legend>Edit</legend>
               <label>
                 First name:
                 <input type="text" name="name" placeholder="patient first name" value="<%= help.name %>" />
@@ -24,6 +24,8 @@
                 Blood Type:
                 <input type="text" name="blood" placeholder="blood type" value="<%= help.blood %>" />
               </label>
+
+
 
               <label>
                 Date of birth:
@@ -41,33 +43,30 @@
                   value="<%= help.otherAllergies %>" />
               </label>
 
-              
               <label>
-                Emergency Contact Information :
+                Emergency Contact Name
                 <input type="text" name="emergencyName" placeholder="Emergency name "
-                value="<%= help.emergencyName %>" />
+                  value="<%= help.emergencyName %>" />
               </label>
-              
+
               <label>
+                Phone Number
                 <input type="text" name="emergencyNumber" placeholder="Emergency number"
-                value="<%= help.emergencyNumber %>" />
+                  value="<%= help.emergencyNumber %>" />
               </label>
-              
+
               <label>
                 Medical Conditions:
                 <input type="text" name="conditions" placeholder="Enter any medical conditions"
                   value="<%= help.conditions %>" />
               </label>
-              
-              <label>
-                Do Not Resuscitate:
-                <input type="checkbox" name="dnr" />
-                <%= help.dnr ? "checked" : "" %>
-              </label>
-              
-              <input type="submit" value="Update Info" />
-              
-            </fieldset>
+
+              Do Not Resuscitate:
+              <input type="checkbox" name="dnr" />
+              <%= help.dnr ? "checked" : "" %>
+                </label>
+              </fieldset>
+              <input class="button" type="submit" value="Update file" />
 
           </form>
 

@@ -5,7 +5,7 @@
   <body>
     <%- include("../partials/header.ejs") %>
 
-      <main>
+      <main >
         <div>
           <form action="/helps" method="POST">
             <fieldset>
@@ -47,16 +47,17 @@
 
               <label>
                 Medical Conditions:
-                <input type="Comment" name="conditions" placeholder="Enter any medical conditions" />
+                <input type="text" name="conditions" placeholder="Enter any medical conditions" />
               </label>
 
               <label>
-                Emergency Contact Name:
+                Emergency Name:
                 <input type="text" name="emergencyName" placeholder="Emergency name" />
               </label>
 
               <label>
-                <input type="number" name="emergencyNumber" placeholder="Emergency number" />
+                Emergency Number:
+                <input type="text" name="emergencyNumber" placeholder="Emergency number" />
               </label>
 
               <br>
@@ -66,8 +67,8 @@
                 <input type="checkbox" name="DNR" />
               </label>
               <br>
-              <input type="submit" value="Create" />
             </fieldset>
+            <input class="button" type="submit" value="Create new file" />
           </form>
 
         </div>

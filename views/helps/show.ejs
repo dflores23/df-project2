@@ -7,38 +7,45 @@
 
             <main>
                 <div>
-                    <article>
-                        <h4>First name</h4>
-                        <%= help.name %>
-                            <h4>Last name </h4>
-                            <%= help.last %>
-                                <h4>Blood type</h4>
-                                <%= help.blood %>
-                                    <h4>Date of Birth</h4>
-                                    <%= help.birth %>
-                                        <h4>Drug Allergies</h4>
-                                        <%= help.allergies %>
-                                            <h4>Other Allergies</h4>
-                                            <%= help.otherAllergies %>
-                                                <h4>Medical Conditions</h4>
-                                                <%= help.conditions %>
-                                                    <h4>Emergency Information</h4>
-                                                    <%= help.emergencyName %>
-                                                        #<%= help.emergencyNumber %>
-                                                            <h4>Do-Not-Resuscitate order</h4>
-                                                            <%= help.dnr ? "Please do not use life saving measures. "
-                                                                : "Please use life saving measures" %>
-                                                                <form action="/helps/<%= help._id %>?_method=Delete"
-                                                                    method="post">
-                                                                    <input class="two" type="submit" value="Delete" />
-                                                                </form>
-                                                                <a href="/helps/<%= help._id%>/edit"><button class="one">Edit</button></a>
-                                                                    
-                                                                
-                    </article>
+                    <fieldset >
+                       <legend> Information </legend>
+                    <div class="uno"> 
+                        <h4>First name</h4> 
+                        <%= help.name %> 
+                         <h4>Last name </h4>
+                         <%= help.last %>
+                         <h4>Blood type</h4>
+                         <%= help.blood %> 
+                         <h4>Date of Birth</h4>
+                         <%= help.birth %>
+                         <h4>Drug Allergies</h4>
+                         <%= help.allergies %>
+                         <h4>Other Allergies</h4>
+                         <%= help.otherAllergies %>
+                         <h4>Medical Conditions</h4>
+                         <%= help.conditions %>
+                         <h4>Emergency Name</h4>
+                         <%= help.emergencyName %>
+                         <h4>Emergency Number</h4>
+                         <%= help.emergencyNumber %>
+                         <h4>Do-Not-Resuscitate order</h4>
+                         <%= help.dnr ? "Please do not use life saving measures. " : "Please use life saving measures" %>
+                        </div>
+                     </fieldset>
+                         
+                         
+<br>
+                        <a href="/helps/<%= help._id %>/edit"> <button class="fun2">Edit</button></a>
 
+                        <form action="/helps/<%= help._id %>?_method=DELETE" method="POST">
+                        <input class="button" type="submit" value="Delete" />
+                    </form>
+                    
+                    
+                    
                 </div>
-            </main>
+                <a href="/helps/"><button class="fun2">Back to Main</button></a>
+                </main>
     </body>
 
 </html>

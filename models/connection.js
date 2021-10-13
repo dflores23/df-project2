@@ -3,7 +3,6 @@
 //__________________
 require("dotenv").config()
 const mongoose = require("mongoose")
-const db = mongoose.connection;
 //_____________________________________________________________
 // How to connect to the database either via heroku or locally
 //_____________________________________________________________
@@ -18,6 +17,7 @@ const CONFIG = {
 
 mongoose.connect(MONGODB_URI, CONFIG);
 
+const db = mongoose.connection;
 // Error / success
 db.on('connected', () => console.log('mongodb connected: '));
 db.on('disconnected', () => console.log('mongodb disconnected'));
