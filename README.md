@@ -18,6 +18,6 @@ On this App ypu will be able to create an account, sign in then enter some impor
 
     As of right now the app is working properly, but the next step is to be able to add pictures and once you enter all of your information, you should be able to generate a QR code.
 
-[Link](https://df-project2.herokuapp.com/)# project2
+[Link](https://df-project2.herokuapp.com/)# project2 
 
 
